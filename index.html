@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>pomodoro</h1>
+    </header>
+
+    <nav>
+        <button id="pom">pomodoro</button><button id="short">short break</button><button id="long">long
+            break</button>
+    </nav>
+
+    <main>
+        <div class="circular-progress">
+            <div class="value-container">00:00</div>
+            <div class="text">PAUSE</div>
+        </div>
+    </main>
+
+    <footer>
+        <button>⚙️</button>
+    </footer>
+
+    <div class="setting">
+        <div class="bodySetting">
+            <h3>Settings</h3>
+            <button>❌</button>
+        </div>
+        <hr>
+
+        <div class="minutes">
+            <h3>time (minutes)</h3>
+            <form action="">
+                <div class="wrapper">
+                    <div class="row"><label for="pom">pomodoro</label><input type="number" name="pomodoro" id="pom"
+                            step="5" min="5" max="60" placeholder="25" required></div>
+                    <div class="row"><label for="lang">short break</label><input type="number" name="short" id="lang"
+                            step="5" min="5" max="60" placeholder="5" required></div>
+                    <div class="row"><label for="short">long break</label><input type="number" name="long" id="short"
+                            step="5" min="5" max="60" placeholder="10" required></div>
+                </div>
+                <div class="sub"><button type="submit">Apply</button></div>
+            </form>
+        </div>
+        <div class="font">
+            <h5>font</h5>
+            <button data-font="16">Aa</button>
+            <button data-font="14">Aa</button>
+            <button data-font="12">Aa</button>
+        </div>
+        <div class="color">
+            <h5>color</h5>
+            <button data-color="#ff6669">✓</button>
+            <button data-color="#2ec2b3">✓</button>
+            <button data-color="#ee82ee">✓</button>
+        </div>
+
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+
+</html>

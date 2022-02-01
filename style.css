@@ -1,0 +1,330 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0c142d;
+    --background2: #0a1125;
+    --font: #ffffff;
+    --progress: #ff6669;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--font);
+    background: var(--background);
+    position: relative;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    width: 25rem;
+    height: 3.125rem;
+    background: var(--background2);
+    border: solid white 1px;
+    border-radius: 25px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--font);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease-in;
+}
+
+nav button:hover {
+    background: var(--progress);
+    color: var(--background);
+}
+
+.active {
+    background: var(--progress);
+    color: var(--background);
+}
+
+.circular-progress {
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--progress);
+    border: 8px solid #1a2133;
+    box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 3px 6px 10px rgba(0,0,0,0.23);
+    position: relative;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 92%;
+    height: 92%;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #0c142d, #0a1125);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.value-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--progress);
+    cursor: pointer;
+}
+
+footer button {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+footer button:hover {
+    transform: scale(1.1);
+}
+
+.setting {
+    border: solid white 1px;
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    height: 75%;
+    background: var(--font);
+    border-radius: 25px;
+    color: var(--background);
+    transition: all 0.5s ease-out;
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.setting h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.setting button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--background);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease-in;
+}
+
+.setting button:hover {
+    transform: scale(1.1);
+}
+
+.hide {
+    top: 50%;
+}
+
+.setting .bodySetting {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    width: 100%;
+    border: solid #ddd 1px;
+}
+
+.setting .minutes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.wrapper .row label {
+    margin-top: 0.5rem;
+}
+
+.wrapper .row input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    margin-top: 0.5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.font,
+.color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.font button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+    background: #ddd;
+}
+
+.font button:nth-child(3) {
+    font-size: 1.2rem;
+}
+
+.font button:nth-child(4) {
+    font-size: 1rem;
+}
+
+.font button:focus {
+    background: var(--background);
+    color: var(--font);
+}
+
+.color button {
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+    color: transparent;
+    background: #ff6669;
+}
+
+.color button:focus {
+    color: var(--background);
+}
+
+.color button:nth-child(3) {
+    background: #2ec2b3;
+}
+
+.color button:nth-child(4) {
+    background: #ee82ee;
+}
+
+.sub {
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(0% - 30px/2);
+}
+
+.sub button {
+    background: none;
+    border: none;
+    height: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease-in;
+    background: var(--progress);
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 430px) {
+    nav {
+        width: 100vw;
+        height: 3rem;
+        place-items: center;
+        gap: 1px;
+    }
+
+    nav button {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .setting {
+        width: 100%;
+    }
+
+    .setting .bodySetting {
+        flex-direction: column;
+    }
+
+    .setting .minutes {
+        width: 100%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper .row {
+        width: 100%;
+    }
+
+    .wrapper .row input {
+        width: 100%;
+    }
+
+    .font button {
+        font-size: 1.2rem;
+    }
+
+    .color button {
+        width: 3.125rem;
+        height: 3.125rem;
+        font-size: 1.2rem;
+    }
+
+    .sub {
+        bottom: calc(0% - 30px/2);
+    }
+}
