@@ -129,7 +129,7 @@ footer button:hover {
     background: var(--font);
     border-radius: 25px;
     color: var(--background);
-    transition: all 0.5s ease-out;
+    transition: top 0.5s ease-in-out;
     padding: 1rem 2rem 3rem 2rem;
 }
 
@@ -278,11 +278,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 430px) {
+ 
     nav {
         width: 100vw;
         height: 3rem;
         place-items: center;
-        gap: 1px;
+        border: none;
     }
 
     nav button {
@@ -292,10 +293,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .setting {
         width: 100%;
-    }
-
-    .setting .bodySetting {
-        flex-direction: column;
+        height: 100vh;
+        border-radius: 0%;
     }
 
     .setting .minutes {
@@ -325,6 +324,6 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     .sub {
-        bottom: calc(0% - 30px/2);
+        bottom: 1rem;
     }
 }
